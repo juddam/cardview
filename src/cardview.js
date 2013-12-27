@@ -103,7 +103,7 @@ function CardView (el, options) {
 		effect: 'rotate',
 		startPage: 0,
 
-		deg: 25,
+		deg: 2,
 		duration: .28,
 		perspective: '300px',
 		resizePolling: 100,

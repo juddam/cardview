@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
-<title>Cardview</title>
+<title>thumb</title>
 
 <script type="text/javascript" src="../../src/cardview.js"></script>
 
@@ -13,27 +13,27 @@
 var deck;
 var data = [
 	{
-		img: '../imgs/img1.jpg',
+		img: '../imgs/img6.jpg',
 		title: 'Card 1',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 	},
 	{
-		img: '../imgs/img2.jpg',
+		img: '../imgs/img7.jpg',
 		title: 'Card 2',
 		text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 	},
 	{
-		img: '../imgs/img3.jpg',
+		img: '../imgs/img8.jpg',
 		title: 'Card 3',
 		text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
 	},
 	{
-		img: '../imgs/img4.jpg',
+		img: '../imgs/img9.jpg',
 		title: 'Card 4',
 		text: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 	},
 	{
-		img: '../imgs/img5.jpg',
+		img: '../imgs/img10.jpg',
 		title: 'Card 5',
 		text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
 	}	
@@ -75,7 +75,7 @@ body, ul, li, h1, h2, h3, img, p {
 body {
 	/* On modern browsers, prevent the whole page to bounce */
 	overflow: hidden;
-	background-color: #aaa;
+	background-color: #fafafa;
 	font-size: 12px;
 }
 
@@ -83,9 +83,7 @@ body {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
-	max-width: 568px;
 	height: 100%;
-	max-height: 568px;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -118,16 +116,15 @@ body {
 	z-index: 10;
 	width: 100%;
 	height: 100%;
-
-	background: #ccc;
 }
 
 .card {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	padding: 10px;
 	z-index: 10;
+
+	border: 1px solid rgb(240,240,240);
 
 	/* Put the scroller into the HW Compositing layer right from the start */
 	-webkit-transform: translateZ(0);
@@ -141,26 +138,29 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	border: 2px solid #aaa;
-	padding: 20px;
-	border-radius: 10px;
 	background: #fff;
 	background-position: 50% 50%;
 	background-size: 95% 95%;
 	background-repeat: no-repeat;
 	font-size: 1.6em;
+
+	margin: 0 auto;
+	text-align: center;
 }
 
 .card img {
-	float: left;
-	margin: 0 10px 10px 0;
-	border: 1px solid #000;
+	width: 90%;
+	margin: 0 auto;;
+	height: auto;
 }
 
 .card h3 {
-	background-color: #aaa;
-	padding: 8px;
-	margin-bottom: 10px;
+	text-align: center;
+}
+
+.card p {
+	max-width: 300px;
+	margin: 0 auto;
 	text-align: center;
 }
 </style>
@@ -170,24 +170,32 @@ body {
 
 <div id="wrapper">
 	<ul id="deck">
-		<li class="card"><div>
-			<h3>Title</h3>
-			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnn
-AAAAAElFTkSuQmCC" alt="thumb" width="125" height="125">
-			<p>Text</p>
-		</div></li>
-		<li class="card"><div>
-			<h3>Title</h3>
-			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnn
-AAAAAElFTkSuQmCC" alt="thumb" width="125" height="125">
-			<p>Text</p>
-		</div></li>
-		<li class="card"><div>
-			<h3>Title</h3>
-			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnn
-AAAAAElFTkSuQmCC" alt="thumb" width="125" height="125">
-			<p>Text</p>
-		</div></li>
+		<li class="card">
+			<div>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnn
+	AAAAAElFTkSuQmCC">
+				<h3>Title</h3>
+				<p>Text</p>
+		</div>
+	</li>
+	
+		<li class="card">
+			<div>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnn
+	AAAAAElFTkSuQmCC">
+				<h3>Title</h3>
+				<p>Text</p>
+			</div>
+		</li>
+
+		<li class="card">
+			<div>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnn
+	AAAAAElFTkSuQmCC">
+				<h3>Title</h3>
+				<p>Text</p>
+			</div>
+		</li>
 	</ul>
 </div>
 
